@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompt Playground | Kova Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Highlight.js for syntax highlighting (~15KB) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="title">
+                <span class="title-icon">✨</span>
+                AI Prompt Playground
+            </h1>
+            <p class="subtitle">Experience the power of AI-generated responses</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Prompt Section -->
+            <section class="prompt-section">
+                <label for="prompt-input" class="label">Enter your prompt</label>
+                
+                <!-- Example Prompts Dropdown -->
+                <div class="example-prompts">
+                    <select id="example-select" class="select" aria-label="Example prompts">
+                        <option value="">-- Select an example prompt --</option>
+                    </select>
+                </div>
+
+                <!-- Prompt Textarea -->
+                <textarea 
+                    id="prompt-input" 
+                    class="textarea" 
+                    placeholder="Type your prompt here or select an example above..."
+                    rows="4"
+                ></textarea>
+
+                <!-- Generate Button -->
+                <button id="generate-btn" class="btn btn-primary">
+                    <span class="btn-text">Generate Response</span>
+                    <span class="btn-loader" aria-hidden="true"></span>
+                </button>
+            </section>
+
+            <!-- Results Section -->
+            <section id="results-section" class="results-section" hidden>
+                <div class="results-header">
+                    <h2 class="results-title">AI Response</h2>
+                    <button id="copy-btn" class="btn btn-secondary" title="Copy to clipboard">
+                        <span id="copy-text">Copy</span>
+                    </button>
+                </div>
+                <div id="results-content" class="results-content"></div>
+            </section>
+
+            <!-- How It Works Section -->
+            <section class="how-it-works">
+                <button 
+                    id="how-toggle" 
+                    class="how-toggle" 
+                    aria-expanded="false" 
+                    aria-controls="how-content"
+                >
+                    <span>How It Works</span>
+                    <span class="toggle-icon" aria-hidden="true">▼</span>
+                </button>
+                <div id="how-content" class="how-content" hidden>
+                    <div class="how-inner">
+                        <h3>About This Demo</h3>
+                        <p>
+                            This is a demonstration of an AI prompt playground interface. 
+                            In a production environment, this would connect to AI models like 
+                            GPT-4, Claude, or similar large language models.
+                        </p>
+                        
+                        <h3>Features Demonstrated</h3>
+                        <ul>
+                            <li><strong>Multi-line Input:</strong> Enter complex prompts with multiple lines</li>
+                            <li><strong>Example Prompts:</strong> Quick-start with pre-defined examples</li>
+                            <li><strong>Syntax Highlighting:</strong> Code responses are beautifully formatted</li>
+                            <li><strong>Copy to Clipboard:</strong> Easily copy responses for use elsewhere</li>
+                        </ul>
+
+                        <h3>Technical Stack</h3>
+                        <ul>
+                            <li>Vanilla JavaScript (no framework dependencies)</li>
+                            <li>CSS3 with custom properties for theming</li>
+                            <li>Highlight.js for syntax highlighting</li>
+                            <li>Fully responsive design</li>
+                        </ul>
+
+                        <p class="note">
+                            <em>Note: This demo uses pre-generated responses. 
+                            No actual API calls are made.</em>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Built with 💜 for <a href="#" class="footer-link">Kova Portfolio</a></p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
